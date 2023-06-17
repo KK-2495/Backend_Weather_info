@@ -3,7 +3,7 @@ import axios from "axios";
 export const getTemp = async (req,res) =>{
     try {
         const{city} = req.body;
-        const accessKey = "478f6249ca8b69915660611ff52d0eb9";
+        const accessKey = "dbaf23ce3deedf5dc8470d864abc7e9f";
         const response = await axios.post(`http://api.weatherstack.com/forecast?access_key=${accessKey}&query=${city}`);
         // console.log(response);
         let temp = response.data.current.temperature;
@@ -16,7 +16,7 @@ export const getTemp = async (req,res) =>{
 export const getWindSpeed = async (req,res) =>{
     try {
         const{city} = req.body;
-        const accessKey = "478f6249ca8b69915660611ff52d0eb9";
+        const accessKey = "f5c116ecca4568be2e2eb128bd6043ea";
         const response = await axios.post(`http://api.weatherstack.com/forecast?access_key=${accessKey}&query=${city}`);
         // console.log(response);
         let temp = response.data.current.wind_speed;
@@ -29,7 +29,7 @@ export const getWindSpeed = async (req,res) =>{
 export const getAstro = async (req,res) =>{
     try {
         const{city} = req.body;
-        const accessKey = "478f6249ca8b69915660611ff52d0eb9";
+        const accessKey = "f5c116ecca4568be2e2eb128bd6043ea";
         const response = await axios.post(`http://api.weatherstack.com/forecast?access_key=${accessKey}&query=${city}`);
         // console.log(response);
         let temp = response.data.forecast['2023-06-15'].astro;
