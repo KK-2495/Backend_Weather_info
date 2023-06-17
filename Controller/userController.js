@@ -22,3 +22,4 @@ export const register = async (req,res) =>{
         return res.send(error);
     }
 }
+
