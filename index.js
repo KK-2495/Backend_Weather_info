@@ -24,7 +24,7 @@ app.listen(4000, ()=>console.log("connected on port"));
 // for(let i=0; i<a.length; i++){
 //     if(a[i] == a[i+1]){
 //         // dup.push(a[i]);
-//         a.splice(a[i],0,a[i]);
+//         a.splice(1,0,a[i]);
 //     }
 // }
 // console.log(a);
