@@ -13,3 +13,25 @@ export const movieData = async (req,res) =>{
         return res.send(error);
     }
 }
+
+
+export const abtChannel = async (req,res) =>{   
+    try {
+          const {id} = req.body;   
+        const options = {
+            method: 'GET',
+            url: 'https://youtube-search-and-download.p.rapidapi.com/channel/about',
+            params: {
+              id
+            },
+            headers: {
+              'X-RapidAPI-Key': 'f571456fc6msh99ccc4937766211p1cb810jsn9362856f689f',
+              'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
+            }
+          };
+          const response = await axios.request(options);
+          console.log(response.data);
+      } catch (error) {
+          console.error(error);
+      }
+}
