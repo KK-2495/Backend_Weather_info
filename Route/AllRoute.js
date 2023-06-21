@@ -3,6 +3,7 @@ import { registerChecks, weatherCheckAuth } from "../Middlware/authChecks.js";
 import { register } from "../Controller/userController.js";
 import { getAstro, getTemp, getWindSpeed } from "../Controller/weatherController.js";
 import { abtChannel, movieData, playList, searchVideo, trending, videoComments, videoInfo, videoRelated, ytChannel } from "../Controller/apiController.js";
+import { detect, languageList, translate } from "../Controller/translateController.js";
 
 
 const router = express.Router();
@@ -25,5 +26,10 @@ router.get('/trending', trending);
 router.get('/video-info', videoInfo);
 router.get('/playlist', playList);
 router.get('/search-video', searchVideo);
+
+//google api//
+router.post('/detect', detect);
+router.get('/language-list', languageList);
+router.post('/translate', translate);
 
 export default router;
